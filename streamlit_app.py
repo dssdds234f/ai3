@@ -45,7 +45,7 @@ if "last_prediction" not in st.session_state:
 # ======================
 # 모델 로드
 # ======================
-FILE_ID = st.secrets.get("1cFVZwfNNpbp80YAXs_-SRxKhjSQjdBMf")
+FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1cFVZwfNNpbp80YAXs_-SRxKhjSQjdBMf")
 MODEL_PATH = st.secrets.get("MODEL_PATH", "model.pkl")
 
 @st.cache_resource
@@ -75,8 +75,8 @@ CONTENT_BY_LABEL: dict[str, dict[str, list[str]]] = {
     #   "videos": ["https://youtu.be/XXXXXXXXXXX"]
     # },
      labels[0]: {
-       "texts": ["짬뽕의 특징과 유래", "국물 맛 포인트", "지역별 스타일 차이"],
-       "images": ["https://.../jjampong1.jpg", "https://.../jjampong2.jpg"],
+       "texts": [짬뽕의 특징과 유래, 국물 맛 포인트, 지역별 스타일 차이],
+       "images": [https://.../jjampong1.jpg", "https://.../jjampong2.jpg"],
        "videos": ["https://youtu.be/XXXXXXXXXXX"]
      },
 }
